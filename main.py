@@ -8,6 +8,7 @@ def Card():
   pCards = []
   dCards = []
   while len(pCards) != 2:
+    #Dealer shows cards and have to hit until greater than 16 and should stay if it either 16 or over 16. 
     pCards.append(cardsDeck.pop())
     if len(pCards) == 2:
       pSum = sum(pCards)
