@@ -9,6 +9,7 @@ def Card():
   dCards = []
   while len(pCards) != 2:
     #Dealer shows cards and have to hit until greater than 16 and should stay if it either 16 or over 16. 
+    #line 13 adds cards to the player hand while popping/removing the card from the list (cardsDeck). 
     pCards.append(cardsDeck.pop())
     if len(pCards) == 2:
       pSum = sum(pCards)
@@ -31,7 +32,7 @@ def Setup():
   print(""" What would you like?
             -P Vs. P 
             -P Vs. AI """)
-  Dict = {"1":PvP()}
+  Dict = {"1":PvP(), "2":None}
   while True:
     try:
       Dict[gamemode()]
