@@ -7,6 +7,13 @@ def Card():
   random.shuffle(cardsDeck)
   pCards = []
   dCards = []
+  #dealer
+  while ():
+    if ():
+      return none
+  while ():
+    if ():
+      return None
   while len(pCards) != 2:
     #Dealer shows cards and have to hit until greater than 16 and should stay if it either 16 or over 16. 
     #line 13 adds cards to the player hand while popping/removing the card from the list (cardsDeck). 
