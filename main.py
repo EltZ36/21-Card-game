@@ -8,41 +8,49 @@ def Card():
   pCards = []
   dCards = []
   #dealer
-  while ():
-    if ():
-      return none
-  while ():
-    if ():
-      return None
-  while len(pCards) != 2:
-    #Dealer shows cards and have to hit until greater than 16 and should stay if it either 16 or over 16. 
-    #line 13 adds cards to the player hand while popping/removing the card from the list (cardsDeck). 
+  while len(dCards) != 2:
+    random.shuffle(cardsDeck)
+    dCards.append(cardsDeck.pop())
+    if len(dCards) == 2:
+      dSum = sum(dCards)
+      print("The dealer has "+str(dSum))
+   while len(pCards) != 2:
+    random.shuffle(cardsDeck)
     pCards.append(cardsDeck.pop())
+    pSum = sum(dCards)
     if len(pCards) == 2:
-      pSum = sum(pCards)
       print("Player has "+str(pSum))
-  while pSum <= 21:
-    choices = int(input("Would you like to draw more (1) or hold onto your deck (2)? "))
+    elif pSum == 21:
+      print("Player has "+str(pSum))
+      print("Player wins")
+      break
+    while pSum < 21:
+    choices = int(input("Would you (player) like to draw more (1) or hold onto your deck (2)? "))
     if (choices == 1):
       pCards.append(cardsDeck.pop())
       pSum = sum(pCards)
       print("Player has "+str(pSum))
       if (pSum > 21):
-        print("Player loses.")
+        print("Player loses. The dealer wins!")
         break
       elif (pSum == 21):
         print("Player wins")
         break
-
+    else:
+      break
 def Setup():
   print("Welcome to 21/Blackjack")
-  print(""" What would you like?
-            -P Vs. P 
-            -P Vs. AI """)
-  Dict = {"1":PvP(), "2":None}
+  Dict = {'1':PvP, '2':None}
   while True:
     try:
-      Dict[gamemode()]
+      gameMode = input(""" What would you like?
+      -P Vs. P (1)
+      -P Vs. AI (2)""")
+      Dict[gameMode]()
       break
-    except Keyerror:
+    except KeyError:
+      print("Please try again and enter 1 or 2")
       continue
+    else:
+      break
+Setup()
