@@ -17,7 +17,7 @@ def Card():
    while len(pCards) != 2:
     random.shuffle(cardsDeck)
     pCards.append(cardsDeck.pop())
-    pSum = sum(dCards)
+    pSum = sum(pCards)
     if len(pCards) == 2:
       print("Player has "+str(pSum))
     elif pSum == 21:
