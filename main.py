@@ -1,3 +1,4 @@
+#goals: -finish game -make code cleaner -make it OOP if possible
 import random
 
 def Card():
