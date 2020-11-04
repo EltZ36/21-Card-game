@@ -15,6 +15,10 @@ def Card():
     if len(dCards) == 2:
       dSum = sum(dCards)
       print("The dealer has "+str(dSum))
+  while dSum < 21: 
+    if (dsum > 21):
+      print("The dealer loses, player wins.)
+      break
    while len(pCards) != 2:
     random.shuffle(cardsDeck)
     pCards.append(cardsDeck.pop())
