@@ -1,4 +1,5 @@
 #goals: -finish game -make code cleaner -make it OOP if possible
+#issues: TypeError: object of type 'bool' has no len()
 import random
 
 def Card():
