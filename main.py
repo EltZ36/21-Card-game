@@ -39,10 +39,13 @@ def PvP():
         break
     else:
       break
-      
+
+def PvAI():
+   return none
+  
 def Setup():
   print("Welcome to 21/Blackjack")
-  Dict = {'1':PvP, '2':None}
+  Dict = {'1':PvP, '2':PvAI}
   while True:
     try:
       gameMode = input(""" What would you like?
