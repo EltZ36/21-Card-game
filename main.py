@@ -14,7 +14,7 @@ def PvP():
     dCards.append(cardsDeck.pop())
     dSum = sum(dCards)
     if (len(dCards) == 2):
-      print("The dealer has "+str(dSum)+" and the first card of the dealer is "+str(dCards[0]))
+      print(f"The dealer has {dSum} and the first card of the dealer is {dCards[0]})
   while len(pCards) != 2:
     pCards.append(cardsDeck.pop())
     pSum = sum(pCards)
@@ -37,6 +37,8 @@ def PvP():
       elif (pSum == 21):
         print("Player wins")
         break
+    elif (choices == 2):
+      print("Dealer goes.")
     else:
       break
 
@@ -45,7 +47,7 @@ def PvAI():
   
 def Setup():
   print("Welcome to 21/Blackjack")
-  Dict = {'1':PvP, '2':PvAI}
+  Dict = {"1":PvP, "2":PvAI}
   while True:
     try:
       gameMode = input(""" What would you like?
