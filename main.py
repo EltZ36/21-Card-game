@@ -1,6 +1,20 @@
 #goals: -finish game -make code cleaner -make it OOP if possible 
 import random
 
+def repeat():
+  while True:
+    try:
+      play_again = input("Would you like to play again? (Y) or (N)")
+      options = {'Y':PvP, 'y':PvP, ' Y':PvP,' y':PvP, 
+      'n':exit, ' n':exit, 'N':exit, ' N':exit}
+      print(options[play_again]())
+      break
+    except KeyError:
+      print("Please try to type in y or n")
+      continue
+    else:
+      break
+      
 def PvP():
   #Ace can either be an 11 or 1. I don't know have to do it
   cardsDeck = [1,2,3,4,5,6,7,8,9,10,10,10,10,11]*4
@@ -14,7 +28,7 @@ def PvP():
     dCards.append(cardsDeck.pop())
     dSum = sum(dCards)
     if (len(dCards) == 2):
-      print(f"The dealer has {dSum} and the first card of the dealer is {dCards[0]})
+      print(f"The dealer has {dSum} and the first card of the dealer is {dCards[0]}")
   while len(pCards) != 2:
     pCards.append(cardsDeck.pop())
     pSum = sum(pCards)
@@ -33,10 +47,10 @@ def PvP():
       print("Player has "+str(pSum))
       if (pSum > 21):
         print("Player loses. The dealer wins!")
-        break
+        repeat()
       elif (pSum == 21):
         print("Player wins")
-        break
+        repeat()
     elif (choices == 2):
       print("Dealer goes.")
     else:
