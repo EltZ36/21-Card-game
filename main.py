@@ -16,7 +16,7 @@ def repeat():
       break
       
 def PvP():
-  #Ace can either be an 11 or 1. I don't know have to do it
+  #Ace can either be an 11 or 1. I don't know how to do it just yet. 
   cardsDeck = [1,2,3,4,5,6,7,8,9,10,10,10,10,11]*4
   # Note: there is 4 suits with 13 cards in each suit. 
   #Options = {}
@@ -57,7 +57,14 @@ def PvP():
       break
 
 def PvAI():
-   return none
+  cardsDeck2 = [1,2,3,4,5,6,7,8,9,10,10,10,10,11]*4
+  random.shuffle(cardsDeck2)
+  pCards = []
+  aiCards = []
+  while len(aiCards) != 2:
+    dCards.append(cardsDeck.pop())
+    dSum = sum(dCards)
+  return none
   
 def Setup():
   print("Welcome to 21/Blackjack")
