@@ -62,9 +62,10 @@ def PvAI():
   pCards = []
   aiCards = []
   while len(aiCards) != 2:
-    dCards.append(cardsDeck.pop())
-    dSum = sum(dCards)
-  return none
+    aiCards.append(cardsDeck.pop())
+    aiSum = sum(aiCards)
+    if (len(aiCards) == 2:
+        return None
   
 def Setup():
   print("Welcome to 21/Blackjack")
