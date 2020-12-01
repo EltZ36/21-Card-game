@@ -66,7 +66,10 @@ def PvAI():
     aiSum = sum(aiCards)
     if (len(aiCards) == 2:
         return None
-  
+
+def DealerMove():
+  print("What will the dealer do now?")
+
 def Setup():
   print("Welcome to 21/Blackjack")
   Dict = {"1":PvP, "2":PvAI}
