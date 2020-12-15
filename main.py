@@ -53,6 +53,7 @@ def PvP():
         repeat()
     elif (choices == 2):
       print("Dealer goes.")
+      DealerMove()
     else:
       break
 
@@ -66,6 +67,7 @@ def PvAI():
     aiSum = sum(aiCards)
     if (len(aiCards) == 2:
         return None
+    #Add random here 
 
 def DealerMove():
   print("What will the dealer do now?")
