@@ -51,8 +51,14 @@ def PvP():
       elif (pSum == 21):
         print("Player wins")
         repeat()
+      elif (pSum == 21 and dSum == 21):
+        print("It is a tie.")
+        repeat()
     elif (choices == 2):
       print("Dealer goes.")
+      if((pSum > dSum) and (pSum < 21)):
+        print("Player wins")
+        repeat()
       DealerMove()
     else:
       break
