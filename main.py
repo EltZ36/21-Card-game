@@ -59,6 +59,9 @@ def PvP():
       if((pSum > dSum) and (pSum < 21)):
         print("Player wins")
         repeat()
+      else:
+        print("Player loses")
+        repear()
       DealerMove()
     else:
       break
