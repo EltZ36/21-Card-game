@@ -1,6 +1,9 @@
 #goals: -finish game -make code cleaner -make it OOP if possible 
 import random
 
+cardsDeck = [1,2,3,4,5,6,7,8,9,10,10,10,10,11]*4
+cardsDeck2 = [1,2,3,4,5,6,7,8,9,10,10,10,10,11]*4
+
 def repeat():
   while True:
     try:
@@ -17,7 +20,7 @@ def repeat():
       
 def PvP():
   #Ace can either be an 11 or 1. I don't know how to do it just yet. 
-  cardsDeck = [1,2,3,4,5,6,7,8,9,10,10,10,10,11]*4
+  global cardsDeck
   # Note: there is 4 suits with 13 cards in each suit. 
   #Options = {}
   random.shuffle(cardsDeck)
@@ -67,7 +70,7 @@ def PvP():
       break
 
 def PvAI():
-  cardsDeck2 = [1,2,3,4,5,6,7,8,9,10,10,10,10,11]*4
+  global cardsDeck2
   random.shuffle(cardsDeck2)
   pCards = []
   aiCards = []
