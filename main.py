@@ -83,12 +83,17 @@ def PvAI():
 
 def DealerMove():
   print("What will the dealer do now?")
-  print("Will the dealer stand (1) or hit (2)")
+  dealerDict = {}
   while True:
         try:
-          return 
+          dealerChoice = input("Will the dealer stand (1) or hit (2)")
+          dealerDict[dealerChoice]()
+          break
         except TypeError:
           print("Please try again.")
+          continue
+        else:
+          break
 
 def Setup():
   print("Welcome to 21/Blackjack")
