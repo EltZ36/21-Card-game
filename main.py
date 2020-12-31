@@ -64,8 +64,8 @@ def PvP():
         repeat()
       else:
         print("Player loses")
-        repear()
-      DealerMove()
+        repeat()
+        DealerMove()
     else:
       break
 
@@ -92,8 +92,6 @@ def DealerMove():
         except TypeError:
           print("Please try again.")
           continue
-        else:
-          break
 
 def Setup():
   print("Welcome to 21/Blackjack")
