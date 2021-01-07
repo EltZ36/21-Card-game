@@ -21,8 +21,6 @@ def repeat():
 def PvP():
   #Ace can either be an 11 or 1. I don't know how to do it just yet. 
   global cardsDeck
-  # Note: there is 4 suits with 13 cards in each suit. 
-  #Options = {}
   random.shuffle(cardsDeck)
   pCards = []
   dCards = []
@@ -30,6 +28,8 @@ def PvP():
   while len(dCards) != 2:
     dCards.append(cardsDeck.pop())
     dSum = sum(dCards)
+    if dCards < 16:
+      print("Dealer must continue to hit.)
     if (len(dCards) == 2):
       print(f"The dealer has {dSum} and the first card of the dealer is {dCards[0]}")
   while len(pCards) != 2:
