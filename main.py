@@ -69,7 +69,7 @@ def PvP():
     elif (choices == 3):
       pCards.append(cardsDeck.pop())
       pSum = sum(pCards)
-      print("bet has increased.")
+      print("bet has doubled.")
     else:
       break
 
