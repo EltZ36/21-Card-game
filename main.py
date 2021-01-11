@@ -3,6 +3,7 @@ import random
 
 cardsDeck = [1,2,3,4,5,6,7,8,9,10,10,10,10,11]*4
 cardsDeck2 = [1,2,3,4,5,6,7,8,9,10,10,10,10,11]*4
+bet = 0 
 
 def repeat():
   while True:
@@ -21,6 +22,7 @@ def repeat():
 def PvP():
   #Ace can either be an 11 or 1. I don't know how to do it just yet. 
   global cardsDeck
+  global bet
   random.shuffle(cardsDeck)
   pCards = []
   dCards = []
@@ -29,7 +31,7 @@ def PvP():
     dCards.append(cardsDeck.pop())
     dSum = sum(dCards)
     if dCards < 16:
-      print("Dealer must continue to hit.)
+      print("Dealer must continue to hit.")
     if (len(dCards) == 2):
       print(f"The dealer has {dSum} and the first card of the dealer is {dCards[0]}")
   while len(pCards) != 2:
