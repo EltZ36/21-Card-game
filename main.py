@@ -27,6 +27,9 @@ def PvP():
   pCards = []
   dCards = []
   #Dealer shows cards and have to hit until greater than 16 and should stay if it either 16 or over 16. 
+  betquestion = int(input("How much do you want to bet?"))
+  print("The player bets"+betquestion)
+  bet = betquestion
   while len(dCards) != 2:
     dCards.append(cardsDeck.pop())
     dSum = sum(dCards)
