@@ -75,6 +75,7 @@ def PvP():
       pCards.append(cardsDeck.pop())
       pSum = sum(pCards)
       print("bet has doubled.")
+      bet = bet*2;
     else:
       break
 
