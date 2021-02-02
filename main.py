@@ -45,7 +45,7 @@ def PvP():
       break
     if pSum == 21:
       print("Player has "+str(pSum))
-      print("Player wins")
+      print("Player wins" + "& gets"+bet)
       break
   while pSum < 21:
     choices = int(input("Would you (player) like to draw more (1), Stand [hold onto your deck (2)], or Double Down (3)? "))
@@ -68,7 +68,7 @@ def PvP():
         print("Player wins")
         repeat()
       else:
-        print("Player loses")
+        print("Player loses"+ "&  the dealer gets"+bet)
         repeat()
         DealerMove()
     elif (choices == 3):
