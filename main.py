@@ -84,6 +84,9 @@ def PvAI():
   random.shuffle(cardsDeck2)
   pCards = []
   aiCards = []
+  betquestion = int(input("How much do you want to bet?"))
+  print("The player bets"+betquestion)
+  bet = betquestion
   while len(aiCards) != 2:
     aiCards.append(cardsDeck.pop())
     aiSum = sum(aiCards)
