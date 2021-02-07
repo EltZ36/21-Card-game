@@ -85,13 +85,13 @@ def PvAI():
   pCards = []
   aiCards = []
   betquestion = int(input("How much do you want to bet?"))
-  print("The player bets"+betquestion)
+  print("The player bets "+str(betquestion))
   bet = betquestion
   while len(aiCards) != 2:
     aiCards.append(cardsDeck.pop())
     aiSum = sum(aiCards)
-    if (len(aiCards) == 2:
-        return None
+    if (len(aiCards) == 2):
+        print(f"The dealer has {aiSum} and the first card of the dealer is {aiCards[0]}")
     #Add random here 
 
 def DealerMove():
