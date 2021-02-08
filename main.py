@@ -33,8 +33,6 @@ def PvP():
   while len(dCards) != 2:
     dCards.append(cardsDeck.pop())
     dSum = sum(dCards)
-    if dCards < 16:
-      print("Dealer must continue to hit.")
     if (len(dCards) == 2):
       print(f"The dealer has {dSum} and the first card of the dealer is {dCards[0]}")
   while len(pCards) != 2:
@@ -45,7 +43,7 @@ def PvP():
       break
     if pSum == 21:
       print("Player has "+str(pSum))
-      print("Player wins" + "& gets"+bet)
+      print("Player wins" + "& gets"+str(bet))
       break
   while pSum < 21:
     choices = int(input("Would you (player) like to draw more (1), Stand [hold onto your deck (2)], or Double Down (3)? "))
@@ -68,9 +66,8 @@ def PvP():
         print("Player wins")
         repeat()
       else:
-        print("Player loses"+ "&  the dealer gets"+bet)
+        print("Player loses"+ "&  the dealer gets"+str(bet))
         repeat()
-        DealerMove()
     elif (choices == 3):
       pCards.append(cardsDeck.pop())
       pSum = sum(pCards)
