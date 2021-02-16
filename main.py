@@ -90,6 +90,46 @@ def PvAI():
     if (len(aiCards) == 2):
         print(f"The dealer has {aiSum} and the first card of the dealer is {aiCards[0]}")
     #Add random here 
+  while len(pCards) != 2:
+    pCards.append(cardsDeck.pop())
+    pSum = sum(pCards)
+    if (len(pCards) == 2):
+      print("Player has "+str(pSum))
+      break
+    if pSum == 21:
+      print("Player has "+str(pSum))
+      print("Player wins" + "& gets"+bet)
+      break
+  while pSum < 21:
+    choices = int(input("Would you (player) like to draw more (1), \nStand [hold onto your deck (2)], \nor Double Down (3)? "))
+    if (choices == 1):
+      pCards.append(cardsDeck.pop())
+      pSum = sum(pCards)
+      print("Player has "+str(pSum))
+      if (pSum > 21):
+        print("Player loses. The dealer wins!")
+        repeat()
+      elif (pSum == 21):
+        print("Player wins")
+        repeat()
+      elif (pSum == 21 and aiSum == 21):
+        print("It is a tie.")
+        repeat()
+    elif (choices == 2):
+      print("Dealer goes.")
+      if((pSum > aiSum) and (pSum < 21)):
+        print("Player wins")
+        repeat()
+      else:
+        print("Player loses"+ "&  the dealer gets"+str(bet))
+        repeat()
+    elif (choices == 3):
+      pCards.append(cardsDeck.pop())
+      pSum = sum(pCards)
+      print("bet has doubled.")
+      bet = bet*2;
+    else:
+      break
 
 def DealerMove():
   print("What will the dealer do now?")
