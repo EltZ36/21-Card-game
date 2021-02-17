@@ -74,7 +74,7 @@ def PvP():
       print("bet has doubled.")
       bet = bet*2;
     else:
-      break
+      continue
 
 def PvAI():
   global cardsDeck2
@@ -129,7 +129,7 @@ def PvAI():
       print("bet has doubled.")
       bet = bet*2;
     else:
-      break
+      continue
 
 def DealerMove():
   print("What will the dealer do now?")
