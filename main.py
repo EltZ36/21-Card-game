@@ -50,7 +50,7 @@ def PvP():
     if (choices == 1):
       pCards.append(cardsDeck.pop())
       pSum = sum(pCards)
-      print("Player has "+str(pSum))
+      print("The player now has "+str(pSum)+".")
       if (pSum > 21):
         print("Player loses. The dealer wins!")
         repeat()
@@ -74,6 +74,7 @@ def PvP():
       print("bet has doubled.")
       bet = bet*2;
     else:
+      print("please enter your choice again.")
       continue
 
 def PvAI():
