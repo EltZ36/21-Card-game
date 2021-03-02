@@ -28,7 +28,7 @@ def PvP():
   dCards = []
   #Dealer shows cards and have to hit until greater than 16 and should stay if it either 16 or over 16. 
   betquestion = int(input("How much do you want to bet?"))
-  print("The player bets"+betquestion)
+  print("The player bets"+str(betquestion))
   bet = betquestion
   while len(dCards) != 2:
     dCards.append(cardsDeck.pop())
@@ -40,10 +40,8 @@ def PvP():
     pSum = sum(pCards)
     if (len(pCards) == 2):
       print("Player has "+str(pSum))
-      break
-    if pSum == 21:
-      print("Player has "+str(pSum))
-      print("Player wins and gets"+str(bet))
+      if pSum == 21:
+        print("Player wins and gets "+str(bet))
       break
   while pSum < 21:
     choices = int(input("Would you (player) like to draw more (1), Stand [hold onto your deck (2)], or Double Down (3)? "))
@@ -66,7 +64,7 @@ def PvP():
         print("Player wins")
         repeat()
       else:
-        print("Player loses"+ "&  the dealer gets "+str(bet))
+        print("Player loses and the dealer gets "+str(bet))
         repeat()
     elif (choices == 3):
       pCards.append(cardsDeck.pop())
@@ -96,10 +94,8 @@ def PvAI():
     pSum = sum(pCards)
     if (len(pCards) == 2):
       print("Player has "+str(pSum))
-      break
-    if pSum == 21:
-      print("Player has "+str(pSum))
-      print("Player wins and gets"+bet)
+      if pSum == 21:
+        print("Player wins and gets "+str(bet))
       break
   while pSum < 21:
     choices = int(input("Would you (player) like to draw more (1), \nStand [hold onto your deck (2)], \nor Double Down (3)? "))
