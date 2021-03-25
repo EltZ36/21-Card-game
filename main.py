@@ -61,7 +61,7 @@ def PvP():
     elif (choices == 2):
       print("Dealer goes.")
       if((pSum > dSum) and (pSum < 21)):
-        print("Player wins")
+        print("Player wins!")
         repeat()
       else:
         print("Player loses and the dealer gets "+str(bet))
@@ -95,7 +95,7 @@ def PvAI():
     if (len(pCards) == 2):
       print("Player has "+str(pSum))
       if pSum == 21:
-        print("Player wins and gets "+str(bet))
+        print("Player wins and gets "+str(bet)+".")
       break
   while pSum < 21:
     choices = int(input("Would you (player) like to draw more (1), \nStand [hold onto your deck (2)], \nor Double Down (3)? "))
@@ -107,7 +107,7 @@ def PvAI():
         print("Player loses. The dealer wins!")
         repeat()
       elif (pSum == 21):
-        print("Player wins")
+        print("Player wins!")
         repeat()
       elif (pSum == 21 and aiSum == 21):
         print("It is a tie.")
