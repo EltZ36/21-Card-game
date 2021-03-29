@@ -88,7 +88,7 @@ def PvAI():
     aiSum = sum(aiCards)
     if (len(aiCards) == 2):
         print(f"The dealer has {aiSum} and the first card of the dealer is {aiCards[0]}")
-    #Add random here 
+        print(f"Ai picks {random.choice(aiCards)}")
   while len(pCards) != 2:
     pCards.append(cardsDeck.pop())
     pSum = sum(pCards)
