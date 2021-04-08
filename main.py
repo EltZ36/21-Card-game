@@ -88,6 +88,9 @@ def PvAI():
     aiSum = sum(aiCards)
     if (len(aiCards) == 2):
         print(f"The dealer has {aiSum} and the first card of the dealer is {aiCards[0]}")
+        if aiSum == 21:
+          print("Dealer wins and gets "+str(bet))
+          repeat()
         print(f"Ai picks {random.choice(aiCards)}")
   while len(pCards) != 2:
     pCards.append(cardsDeck.pop())
@@ -96,9 +99,9 @@ def PvAI():
       print("Player has "+str(pSum))
       if pSum == 21:
         print("Player wins and gets "+str(bet)+".")
-      break
+        break
   while pSum < 21:
-    choices = int(input("Would you (player) like to draw more (1), \nStand [hold onto your deck (2)], \nor Double Down (3)? "))
+    choices = int(input("Would you (player) like to draw more (1), \nStand [hold onto your deck (2)]"))
     if (choices == 1):
       pCards.append(cardsDeck.pop())
       pSum = sum(pCards)
@@ -120,11 +123,6 @@ def PvAI():
       else:
         print("Player loses"+ "&  the dealer gets "+str(bet))
         repeat()
-    elif (choices == 3):
-      pCards.append(cardsDeck.pop())
-      pSum = sum(pCards)
-      print("bet has doubled.")
-      bet = bet*2;
     else:
       continue
 
