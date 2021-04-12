@@ -19,7 +19,7 @@ def repeat():
     else:
       break
       
-def PvP():
+def P_vs_P():
   #Ace can either be an 11 or 1. I don't know how to do it just yet. 
   global cardsDeck
   global bet
@@ -75,7 +75,7 @@ def PvP():
       print("please enter your choice again.")
       continue
 
-def PvAI():
+def P_vs_AI():
   global cardsDeck2
   random.shuffle(cardsDeck2)
   pCards = []
@@ -126,21 +126,9 @@ def PvAI():
     else:
       continue
 
-def DealerMove():
-  print("What will the dealer do now?")
-  dealerDict = {}
-  while True:
-        try:
-          dealerChoice = input("Will the dealer stand (1) or hit (2)")
-          dealerDict[dealerChoice]()
-          break
-        except TypeError:
-          print("Please try again.")
-          continue
-
 def Setup():
   print("Welcome to 21/Blackjack")
-  Dict = {"1":PvP, "2":PvAI}
+  Dict = {"1":P_vs_P, "2":P_vs_AI}
   while True:
     try:
       gameMode = input(""" What would you like?
