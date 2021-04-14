@@ -9,7 +9,7 @@ def repeat():
   while True:
     try:
       play_again = input("Would you like to play again? (Y) or (N)")
-      options = {'Y':PvP, 'y':PvP, ' Y':PvP,' y':PvP, 
+      options = {'Y':Setup, 'y':Setup, ' Y':Setup,' y':Setup, 
       'n':exit, ' n':exit, 'N':exit, ' N':exit}
       print(options[play_again]())
       break
@@ -44,7 +44,7 @@ def P_vs_P():
         print("Player wins and gets "+str(bet))
       break
   while pSum < 21:
-    choices = int(input("Would you (player) like to draw more (1), Stand [hold onto your deck (2)], or Double Down (3)? "))
+    choices = int(input("Would you (player) like to draw more (1) or Stand [hold onto your deck (2)]? "))
     if (choices == 1):
       pCards.append(cardsDeck.pop())
       pSum = sum(pCards)
@@ -101,7 +101,7 @@ def P_vs_AI():
         print("Player wins and gets "+str(bet)+".")
         break
   while pSum < 21:
-    choices = int(input("Would you (player) like to draw more (1), \nStand [hold onto your deck (2)]"))
+    choices = int(input("Would you (player) like to draw more (1) or Stand [hold onto your deck (2)]?"))
     if (choices == 1):
       pCards.append(cardsDeck.pop())
       pSum = sum(pCards)
