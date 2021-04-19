@@ -18,7 +18,16 @@ def repeat():
       continue
     else:
       break
-      
+
+def DealerMove():
+  print("What will the dealer do now?")
+  dealerChoice = input("Will the dealer draw (1) or stand? (2)")
+  if(dealerChoice == 1):
+    dCards.append(cardsDeck.pop())
+    dSum = sum(dCards)
+  else:
+    print("Player goes.")
+    
 def P_vs_P():
   #Ace can either be an 11 or 1. I don't know how to do it just yet. 
   global cardsDeck
@@ -60,17 +69,13 @@ def P_vs_P():
         repeat()
     elif (choices == 2):
       print("Dealer goes.")
+      Dealermove()
       if((pSum > dSum) and (pSum < 21)):
         print("Player wins!")
         repeat()
       else:
         print("Player loses and the dealer gets "+str(bet))
         repeat()
-    elif (choices == 3):
-      pCards.append(cardsDeck.pop())
-      pSum = sum(pCards)
-      print("bet has doubled.")
-      bet = bet*2;
     else:
       print("please enter your choice again.")
       continue
