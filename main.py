@@ -20,6 +20,8 @@ def repeat():
       break
 
 def DealerMove():
+  global dCards
+  global dSum
   print("What will the dealer do now?")
   dealerChoice = input("Will the dealer draw (1) or stand? (2)")
   if(dealerChoice == 1):
@@ -28,6 +30,10 @@ def DealerMove():
   else:
     print("Player goes.")
     
+
+dCards = [] 
+dSum = sum(dCards)
+
 def P_vs_P():
   #Ace can either be an 11 or 1. I don't know how to do it just yet. 
   global cardsDeck
@@ -67,6 +73,8 @@ def P_vs_P():
       elif (pSum == 21 and dSum == 21):
         print("It is a tie.")
         repeat()
+      else:
+        Dealermove()
     elif (choices == 2):
       print("Dealer goes.")
       Dealermove()
