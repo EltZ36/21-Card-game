@@ -4,6 +4,8 @@ import random
 cardsDeck = [1,2,3,4,5,6,7,8,9,10,10,10,10,11]*4
 cardsDeck2 = [1,2,3,4,5,6,7,8,9,10,10,10,10,11]*4
 bet = 0 
+dCards = [] 
+dSum = sum(dCards)
 
 def repeat():
   while True:
@@ -29,10 +31,6 @@ def DealerMove():
     dSum = sum(dCards)
   else:
     print("Player goes.")
-    
-
-dCards = [] 
-dSum = sum(dCards)
 
 def P_vs_P():
   #Ace can either be an 11 or 1. I don't know how to do it just yet. 
@@ -49,14 +47,14 @@ def P_vs_P():
     dCards.append(cardsDeck.pop())
     dSum = sum(dCards)
     if (len(dCards) == 2):
-      print(f"The dealer has {dSum} and the first card of the dealer is {dCards[0]}")
+      print(f"The dealer has {dSum} and the first card of the dealer is {dCards[0]}.")
   while len(pCards) != 2:
     pCards.append(cardsDeck.pop())
     pSum = sum(pCards)
     if (len(pCards) == 2):
       print("Player has "+str(pSum))
       if pSum == 21:
-        print("Player wins and gets "+str(bet))
+        print("Player wins and gets "+str(bet)+".")
       break
   while pSum < 21:
     choices = int(input("Would you (player) like to draw more (1) or Stand [hold onto your deck (2)]? "))
@@ -68,7 +66,7 @@ def P_vs_P():
         print("Player loses. The dealer wins!")
         repeat()
       elif (pSum == 21):
-        print("Player wins")
+        print("Player wins.")
         repeat()
       elif (pSum == 21 and dSum == 21):
         print("It is a tie.")
@@ -82,7 +80,7 @@ def P_vs_P():
         print("Player wins!")
         repeat()
       else:
-        print("Player loses and the dealer gets "+str(bet))
+        print("Player loses and the dealer gets "+str(bet)+".")
         repeat()
     else:
       print("please enter your choice again.")
@@ -102,7 +100,7 @@ def P_vs_AI():
     if (len(aiCards) == 2):
         print(f"The dealer has {aiSum} and the first card of the dealer is {aiCards[0]}")
         if aiSum == 21:
-          print("Dealer wins and gets "+str(bet))
+          print("Dealer wins and gets "+str(bet)+".")
           repeat()
         print(f"Ai picks {random.choice(aiCards)}")
   while len(pCards) != 2:
@@ -131,10 +129,10 @@ def P_vs_AI():
     elif (choices == 2):
       print("Dealer goes.")
       if((pSum > aiSum) and (pSum < 21)):
-        print("Player wins")
+        print("Player wins.")
         repeat()
       else:
-        print("Player loses"+ "&  the dealer gets "+str(bet))
+        print("Player loses and the dealer gets "+str(bet)+".")
         repeat()
     else:
       continue
@@ -150,7 +148,7 @@ def Setup():
       Dict[gameMode]()
       break
     except KeyError:
-      print("Please try again and enter 1 or 2")
+      print("Please try again and enter 1 or 2.")
       continue
     else:
       break
