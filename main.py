@@ -16,7 +16,7 @@ def repeat():
       print(options[play_again]())
       break
     except KeyError:
-      print("Please try to type in y or n")
+      print("Please try to type in y or n.")
       continue
     else:
       break
@@ -98,7 +98,7 @@ def P_vs_AI():
     aiCards.append(cardsDeck.pop())
     aiSum = sum(aiCards)
     if (len(aiCards) == 2):
-        print(f"The dealer has {aiSum} and the first card of the dealer is {aiCards[0]}")
+        print(f"The dealer has {aiSum} and the first card of the dealer is {aiCards[0]}.")
         if aiSum == 21:
           print("Dealer wins and gets "+str(bet)+".")
           repeat()
